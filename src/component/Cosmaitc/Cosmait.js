@@ -1,12 +1,14 @@
 import React from 'react';
 import '../Cosmaitc/Cosmaitc.css'
+import { addToDb } from '../shop/Fakedb';
 
 
 const Cosmait = (props) => {
     const { id, name, price } = props.cosmatik
 
     const addToCart = (id) => {
-        console.log('product added', id);
+
+        addToDb(id)
     }
 
     return (
