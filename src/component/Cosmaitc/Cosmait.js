@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Cosmaitc/Cosmaitc.css'
-import { addToDb } from '../shop/Fakedb';
+import { addToDb, removeFromDb } from '../shop/Fakedb';
 
 
 const Cosmait = (props) => {
@@ -10,6 +10,9 @@ const Cosmait = (props) => {
 
         addToDb(id)
     }
+    const removeFromCart = (id) => {
+        removeFromDb(id)
+    }
 
     return (
         <div className='cosmatic'>
@@ -17,6 +20,7 @@ const Cosmait = (props) => {
             <h3>Nmae : {name}</h3>
             <h4>Price: {price}</h4>
             <button onClick={() => { addToCart(id) }}> Add  to Cart</button>
+            <button onClick={() => { removeFromCart(id) }}> Remove</button>
         </div>
     );
 };
