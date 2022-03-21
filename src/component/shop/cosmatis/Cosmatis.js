@@ -15,7 +15,7 @@ const Cosmatis = () => {
             <h1>Welcome to cosmetis store</h1>
             {/* <p>Total {total}</p> */}
             {
-                cosmtics.map(cosmatik => <Cosmait cosmatik={cosmatik}></Cosmait>)
+                cosmtics.map(cosmatik => <Cosmait key={cosmatik.id} cosmatik={cosmatik}></Cosmait>)
             }
         </div >
     );
